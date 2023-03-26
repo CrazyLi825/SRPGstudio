@@ -14,3 +14,27 @@ This alters the way hit rate is calculated to be more in line with how it works 
 | Minimum Damage (mindmg.js) |
 
 This allows you to change the minimum damage an attack can do via a global parameter. By default, the minimum is 0, allowing for no-damage attacks. In Genealogy of the Holy War (as well as Shadows of Valentia), this was not possible and all attacks did at least 1 damage. You can replicate this by adding a {minDamage: 1} Global Parameter.
+
+| Custom Defense (custom-def.js) |
+
+This allows you to define a custom parameter in a weapon to change the target's defense stat for calcuation. Normally, you can only target def or res, but this allows just about any other stat to be used instead. 
+Valid values that can be used:
+hp = current HP
+mhp = max HP
+str = strength
+mag = magic
+skl = skill
+spd = speed
+luk = luck
+mov = movement
+wlv = weapon level
+bld = build
+example: {altdef:"luk"} this would make the weapon target luck.
+
+| Double Terrain Bonus (doubleterrain.js) |
+
+This allows you to put a custom parameter in a class type that will multiply all terrain bonuses for members of that class type, akin to Engage's Covert bonus. Example use: {tbonus: 2} will double the bonuses.
+
+| Ignis (ignis.js) |
+
+This can replicate FE's Ignis (華炎) skill where half of STR gets added to calculation for magic attacks and half of MAG gets added to calculation for physical attacks. To use, create a skill with Custom type and set the keyword to "Ignis".
